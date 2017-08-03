@@ -7,10 +7,25 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-
+<!-- jquery 3.2.1 -->
+<script type="text/javascript" src="<?= $js ?>/jquery-3.2.1.js"></script>
+    
 <?php $this->load->view('header/headerGeneral'); ?>
 <?php $this->load->view('header/headerInclude'); ?>
- 
+
+<!--stylesheets-->
+<link rel="stylesheet" href="<?= $css ?>/bootstrap.min.css">
+<link rel="stylesheet" href="<?= $css ?>/font-awesome.css">
+<link rel="stylesheet" href="<?= $css ?>/ie.css">
+<link rel="stylesheet" href="<?= $css ?>/style.css">
+<!--scripts-->
+<script type="text/javascript" src="<?= $js ?>/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?= $js ?>/functions.js"></script>
+<script type="text/javascript" src="<?= $js ?>/images.min.js"></script>
+<script type="text/javascript" src="<?= $js ?>/masonry.min.js"></script>
+<script type="text/javascript" src="<?= $js ?>/modernizr-2.8.3.min.js"></script>
+<script type="text/javascript" src="<?= $js ?>/TweenMax.min.js"></script>
+
 </head>
 <body class="home">
   <div id="loader"><div id="loader-wrapper"><span class="loader-inner"></span></div></div>    
@@ -64,8 +79,16 @@
              </ul>
            </nav>
         </div><!-- // .main-menu-->
-                      
-        <h1 class="site-title site-name">TheKochi</h1>
+        
+        <!-- changed by mazahir -->
+        <!-- <h1 class="site-title site-name">TheKochi</h1> -->
+        <h1 class="site-title site-name">
+        	<a id="logo-container" href="<?= base_url() ?>">
+			<img class="brand-logo" src="<?= $images; ?>/thekochi.png" alt="theKochi">
+    </a>
+    </h1>
+    <!-- changed by mazahir -->
+
 		<p class="site-description">The City With No Limits</p>
 
        <button class="header-icon" id="btn-search"><i class="fa fa-search"></i></button>
@@ -98,13 +121,13 @@
                       <a href="post.html" class="box">
                       <img src="<?= $images ?>/posts/001.jpg" alt="DINOSAURS ARE STILL ALIVE" />
                       <div class="entry-content">
-                        <span class="box-cat">Sports</span>
+                        <span class="box-cat"><?php echo $cardbox1 ?></span>
                         <span class="type-post"><i class="fa fa-picture-o"></i></span>
                         <div class="bottom-box">
                          <time datetime="2015-06-05">5 Jun</time>
-                         <h3>FIFA U-17 World Cup 2017</h3>
-                         <span class="nickname">FP Sports</span>
-                         <p class="hidden_el">Kochi to host heavyweights Brazil and Spain, will also witness a Germany match. </p>
+                         <h3><?php echo $cardhead1 ?></h3>
+                         <span class="nickname"><?php echo $cardnickname1 ?></span>
+                         <p class="hidden_el"><?php echo $cardpara1 ?></p>
                         </div>
                        </div>
                       </a>

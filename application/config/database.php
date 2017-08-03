@@ -73,12 +73,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+/* changed by mazahir */
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => 'qwerty',
-	'database' => 'courses',
+	'password' => '',
+	'database' => 'thekochi',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

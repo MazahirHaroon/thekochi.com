@@ -15,6 +15,24 @@ class Init extends CI_Model {
         //$data['uploads']    = $this->config->item ("datafile_path_vendor_uploads");//"/vendoruploads";
         //$data["ajaxpath"]   = $this->config->item ("ajaxpath");
         $data["title"]      = "";
+        
+        /* added by mazahir */
+        //card contents
+        $this->db->select('*');
+        $this->db->from ('card');
+        $query = $this->db->get ();
+        if ($query->num_rows() > 0) {
+                log_message('info','getting card data');
+                foreach ($query->result() as $row){
+                  $data['cno'] = $row -> Cno;
+                  $data['cardhead'.$data['cno']] = $row -> Cardhead;
+                  $data['cardpara'.$data['cno']] = $row -> Cardpara;
+                  $data['cardnickname'.$data['cno']] = $row -> Cardnickname;
+                  $data['cardbox'.$data['cno']] = $row -> Cardbox;
+              }
+          }
+        /* added by mazahir */
+
         return $data;
     }
     function commonVariables () {
@@ -462,6 +480,8 @@ class Init extends CI_Model {
                                     'Zambian',
                                     'Zimbabwean'
                                     );
+   
+
     return $data;
     }
 
