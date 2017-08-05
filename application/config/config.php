@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$base_url= 'http://localhost/thekochi.com';
+$base_url= 'http://www.cyphotec.com/projects/thekochi';
 //$base_url= 'http://domain.com';
 $config['base_url']	= $base_url;
 $config['css'] = $base_url.'/assets/css';
